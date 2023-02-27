@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_select_image"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/grey_900"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_camera"/>
+
+    <TextView
+        android:id="@+id/tv_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableTopCompat="@drawable/ic_vector_photo_camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:text="@string/lbl_camera"
+        android:textColor="@color/blue_grey_700"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_gallery"
+        android:layout_margin="@dimen/_30sdp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+    <TextView
+        android:id="@+id/tv_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableTopCompat="@drawable/ic_vector_gallery"
+        app:layout_constraintStart_toEndOf="@id/tv_camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:text="@string/lbl_gallery"
+        android:textColor="@color/blue_grey_700"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/_30sdp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="abhishek.mathur.favdish">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--For WRITE EXTERNAL STORAGE warning you can have a look at this article I hope it will clear your doubt.
+        https://www.raywenderlich.com/9577211-scoped-storage-in-android-10-getting-started -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FavDish">
+        <activity
+            android:name=".view.activities.AddUpdateDishActivity"
+            android:exported="true"
+            android:label="Add Dish"
+            android:theme="@style/Theme.FavDish.NoActionBar"
+            android:configChanges="orientation"/>
+        <activity
+            android:name=".view.activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FavDish.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activities.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+    </application>
+
+</manifest>
